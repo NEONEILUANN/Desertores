@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Desertores RA</title>
+
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/tokens.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+
+<body>
+
+    <a-scene
+        id="scene"
+        embedded
+        vr-mode-ui="enabled: false"
+        arjs="trackingMethod: best; sourceType: webcam;">
+
+        <a-assets>
+
+            <img
+                id="zarperMaria"
+                src="imagens/personagens/Zarper1Maria.png">
+
+        </a-assets>
+
+        <a-marker
+            type="pattern"
+            url="marcadores/patt/pattern-Marcador1.patt">
+
+            <a-plane
+                src="#zarperMaria"
+                width="1"
+                height="1.5"
+                position="0 0.75 0"
+                material="side: double;">
+            </a-plane>
+
+        </a-marker>
+
+        <a-entity camera></a-entity>
+
+    </a-scene>
+
+</body>
+
+</html>
