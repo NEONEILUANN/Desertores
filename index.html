@@ -32,8 +32,18 @@
             <img
                 id="zarperMaria"
                 src="imagens/personagens/Zarper1Maria.png">
+             <!-- Personagem 2 -->
+            <img
+                id="zarJoana"
+                src="imagens/personagens/Zarjoana1.png">
+
+            <!-- Modelo 3D -->
+            <a-asset-item
+                id="S01N"
+                src="modelos/itens/S01N.1.glb">
 
         </a-assets>
+        
 
         <a-marker
             type="pattern"
@@ -46,6 +56,31 @@
                 position="0 0.75 0"
                 material="side: double;">
             </a-plane>
+
+        </a-marker>
+
+        <a-marker
+            type="pattern"
+            url="marcadores/patt/pattern-Marcador2.patt">
+
+            <a-plane
+                src="#zarJoana"
+                width="1"
+                height="1.5"
+                position="0 0.75 0"
+                material="side: double">
+            </a-plane>
+
+        </a-marker>
+        <a-marker
+            type="pattern"
+            url="marcadores/patt/pattern-Marcador3.patt">
+
+            <a-gltf-model
+                src="#S01N"
+                scale="0.5 0.5 0.5"
+                position="0 0 0">
+            </a-gltf-model>
 
         </a-marker>
 
